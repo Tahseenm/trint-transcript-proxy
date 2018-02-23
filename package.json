@@ -7,6 +7,9 @@
   "scripts": {
     "start": "yarn dev",
     "dev": "nodemon src/. --exec babel-node",
+    "prebuild": "yarn clean",
+    "build": "babel src --out-dir dist",
+    "clean": "rimraf dist",
     "test": "@TODO"
   },
   "author": "Tahseen Malik <hello@tahseen.me> (https://tahseenmalik.com/)",
@@ -16,12 +19,14 @@
     "express": "^4.16.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
     "@babel/node": "^7.0.0-beta.40",
     "@babel/preset-env": "^7.0.0-beta.40",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
-    "nodemon": "^1.15.1"
+    "nodemon": "^1.15.1",
+    "rimraf": "^2.6.2"
   }
 }
