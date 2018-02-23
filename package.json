@@ -1,0 +1,27 @@
+{
+  "name": "transcript-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Load transcript efficiently for the React client app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "yarn dev",
+    "dev": "nodemon src/. --exec babel-node",
+    "test": "@TODO"
+  },
+  "author": "Tahseen Malik <hello@tahseen.me> (https://tahseenmalik.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/node": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "nodemon": "^1.15.1"
+  }
+}
