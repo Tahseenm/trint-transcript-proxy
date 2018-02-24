@@ -1,13 +1,12 @@
 import express from 'express'
+import routes  from './routes'
 
 
 const app = express()
 
-app.get('/', (request, respond) => {
-  respond.json({
-    message: 'Hello, World!',
-  })
-})
+
+/** API routes */
+app.use('/api/v1', routes)
 
 /** Catch 404 */
 app.use((request, respond, next) => {
