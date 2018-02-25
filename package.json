@@ -10,7 +10,10 @@
     "prebuild": "yarn clean",
     "build": "babel src --out-dir dist",
     "clean": "rimraf dist",
-    "test": "@TODO"
+    "lint": "eslint src",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "validate": "yarn lint && yarn test"
   },
   "author": "Tahseen Malik <hello@tahseen.me> (https://tahseenmalik.com/)",
   "license": "MIT",
@@ -23,9 +26,12 @@
     "@babel/core": "^7.0.0-beta.40",
     "@babel/node": "^7.0.0-beta.40",
     "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.4.1",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
+    "jest": "^22.4.2",
     "nodemon": "^1.15.1",
     "rimraf": "^2.6.2"
   }
