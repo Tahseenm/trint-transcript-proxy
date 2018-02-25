@@ -14,7 +14,12 @@ const handler = async (request, respond) => {
     offset = 0,
   } = request.query
 
-  if (!isInteger(limit) || isInteger(offset)) throw new Error('Invalid query options. Limit and offset must be a integer.')
+  if (!isInteger(limit) || !isInteger(offset)) {
+    const error = new Error('Invalid query options. Limit and offset must be a integer.')
+    error.status = 400
+
+    throw error
+  }
 
   const transcriptChunk = await transcript(Number(limit), Number(offset))
   respond.json(transcriptChunk)
