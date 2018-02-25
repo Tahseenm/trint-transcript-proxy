@@ -2,7 +2,7 @@ import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
 import getTranscript, { TRANSCRIPT_S3_URL } from './transcript'
 
-import transcript from './transcript.fixture.json'
+import transcript from './fixtures/transcript.json'
 import { isPromise } from '../utils'
 
 
